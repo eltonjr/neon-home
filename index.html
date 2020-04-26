@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Home</title>
-</head>
 
+    <title>Home</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
 <body>
-    <main>
-        <div class="prompt">[<span data-Name>user</span>@<span>home</span> ~]$ tree</div>
-        <div class="tree">
-            <h1>.</h1>
-            <ul id="list">
+
+    <div class="content" id="content">
+
+        <div class="column">
+            <ul class="row">
+                <h3>#news</h3>
                 <li>
-                    <h1>[error]</h1>
+                    <a target="_blank" href="https://news.ycombinator.com/">hn</a>
                 </li>
             </ul>
         </div>
-        <div class="prompt">[<span data-Name>user</span>@<span>home</span> ~]$ ddg</div>
 
-        <form action="https://duckduckgo.com/" method="GET" autocomplete="off">
-            <h1>search:&nbsp;</h1>
-            <textarea type="text" name="q" id="search" wrap="hard" autofocus></textarea>
-        </form>
-    </main>
+        <div class="column">
+            <h3>#news</h3>
+            <li>
+                <a target="_blank" href="https://news.ycombinator.com/">hn</a>
+            </li>
+        </div>
+
+        <div class="column">
+            <h3>#news</h3>
+            <li>
+                <a target="_blank" href="https://news.ycombinator.com/">hn</a>
+            </li>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="script/script.js"></script>
 </body>
-
 </html>
-
-<script src="script/script.js"></script>
