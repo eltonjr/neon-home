@@ -24,7 +24,11 @@ const Data = [{
 		items: [
 		{
 			"name": "example",
-			"href": "https://example.com/"
+			"href": "https://example.com/",
+			"tags": [{
+				"name": "git",
+				"href": "http://github.com/example"
+			}]
 		}
 	]
 	}]
@@ -47,8 +51,9 @@ const Main = (() => {
 			${col.rows.map(({title, items}) => `
 				<h3>${title}</h3>
 				<ul class="row">
-				${items.map(({name, href}) => `<li>
-					<a target="_blank" href="${href}">${name}</a>
+				${items.map(({name, href, tags}) => `<li>
+                    <a target="_blank" href="${href}">${name}</a>&nbsp&nbsp${(tags || []).map(({name, href}) => `
+                    [<a target="_blank" class="${name}" href="${href}">${name}</a>]`).join("&nbsp")}
 				</li>`).join("")}
 			</ul>`).join("")}
 		</div>`).join("");

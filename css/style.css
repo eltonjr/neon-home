@@ -5,6 +5,7 @@
     --pink: #e53170;
     --red: #f25f4c;
     --orange: #ff8906;
+    --green: #37e2b7;
     --branch: 1px solid #a7a9be;
 }
 
@@ -89,4 +90,16 @@ a:hover,
 a:focus {
     color: var(--background);
     background: var(--white);
+}
+
+.git {
+    color: var(--orange);
+}
+
+.nr {
+    color: var(--green);
+}
+
+.k {
+    color: var(--pink);
 }
