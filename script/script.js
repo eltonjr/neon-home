@@ -52,8 +52,8 @@ const Main = (() => {
 				<h3>${title}</h3>
 				<ul class="row">
 				${items.map(({name, href, tags}) => `<li>
-                    <a target="_blank" href="${href}">${name}</a>&nbsp&nbsp${(tags || []).map(({name, href}) => `
-                    [<a target="_blank" class="${name}" href="${href}">${name}</a>]`).join("&nbsp")}
+                    <a href="${href}">${name}</a>&nbsp&nbsp${(tags || []).map(({name, href}) => `
+                    [<a class="${name}" href="${href}">${name}</a>]`).join(" ")}
 				</li>`).join("")}
 			</ul>`).join("")}
 		</div>`).join("");
