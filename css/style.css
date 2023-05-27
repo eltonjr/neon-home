@@ -1,6 +1,9 @@
 /* @font-face {
     font-family: 'Inconsolata';
-    src:url('/Users/ehoffmann/workspace/src/github.com/eltonjr/homeFork/fonts/inconsolata.woff') format('woff');
+    src:url('fonts/inconsolata.woff') format('woff');
+    font-display: swap;
+    font-style: monospace;
+    font-weight: 400;
 } */
 
 :root {
@@ -11,14 +14,8 @@
     --orange: #ff8906;
     --green: #37e2b7;
     --green-vivid: #00bf01;
+    --blue: #04d9ff;
     --branch: 1px solid #a7a9be;
-}
-
-html {
-    height: 100%;
-    background-color: var(--background);
-    font-family: 'Inconsolata', monospace;
-    color: #FFF;
 }
 
 body {
@@ -26,6 +23,11 @@ body {
     display: flex;
     align-content: center;
     justify-content: center;
+    height: 100%;
+    background-color: var(--background);
+    font-family: 'Inconsolata', monospace;
+    color: #FFF;
+    font-size: 100%;
 }
 
 .content {
@@ -37,7 +39,7 @@ body {
 
 h3 {
     color: var(--pink);
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
 }
 
@@ -96,6 +98,10 @@ a:hover,
 a:focus {
     color: var(--background);
     background: var(--white);
+}
+
+.redirect {
+    color: var(--blue);
 }
 
 .git {

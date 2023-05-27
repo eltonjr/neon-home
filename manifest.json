@@ -1,12 +1,12 @@
 {
-    "name": "My custom new tab page",
+    "name": "Neon home",
     "description": "Overrides the new tab page",
-    "version": "0.1",
+    "version": "1.0",
     "incognito": "split",
     "chrome_url_overrides": {
         "newtab": "index.html"
     },
-    "manifest_version": 2,
+    "manifest_version": 3,
     "permissions": [
         "https://fonts.googleapis.com/*"
     ]
