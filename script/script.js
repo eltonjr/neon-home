@@ -12,13 +12,13 @@ const Main = (() => {
 		</div>`).join("");
 	}
 
-	const onlyLink = (href, title) => `<h3><a class="redirect" href="${href}">${title}</a></h3>`;
+	const onlyLink = (href, title) => `<h3><a class="blue" href="${href}">${title}</a></h3>`;
 	const blockWithList = (title, items) => {
 		return `<h3>${title}</h3>
 				<ul class="row">
 					${(items || []).map(({name, href, tags}) => `<li>
-						<a href="${href}">${name}</a>&nbsp&nbsp${(tags || []).map(({name, href}) => `
-						[<a class="${name}" href="${href}">${name}</a>]`).join(" ")}
+						<a href="${href}">${name}</a>&nbsp&nbsp${(tags || []).map(({name, color, href}) => `
+						[<a class="${color}" href="${href}">${name}</a>]`).join(" ")}
 					</li>`).join("")}
 				</ul>`;
 	};

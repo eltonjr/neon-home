@@ -12,8 +12,8 @@
     --pink: #e53170;
     --red: #f25f4c;
     --orange: #ff8906;
-    --green: #37e2b7;
-    --green-vivid: #00bf01;
+    --mint: #37e2b7;
+    --green: #00bf01;
     --blue: #04d9ff;
     --branch: 1px solid #a7a9be;
 }
@@ -100,22 +100,22 @@ a:focus {
     background: var(--white);
 }
 
-.redirect {
+.blue {
     color: var(--blue);
 }
 
-.git {
+.orange {
     color: var(--orange);
 }
 
-.nr {
-    color: var(--green);
+.mint {
+    color: var(--mint);
 }
 
-.k {
+.pink {
     color: var(--pink);
 }
 
-.doc {
-    color: var(--green-vivid);
+.green {
+    color: var(--green);
 }
