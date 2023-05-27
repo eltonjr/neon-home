@@ -25,6 +25,7 @@ const Data = [{
 			"href": "https://example.com/",
 			"tags": [{
 				"name": "git",
+				"color": "orange",
 				"href": "http://github.com/example"
 			}]
 		}
