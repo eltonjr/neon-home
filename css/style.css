@@ -12,9 +12,11 @@
     --pink: #e53170;
     --red: #f25f4c;
     --orange: #ff8906;
-    --mint: #37e2b7;
+    --yellow: #f0c863;
     --green: #00bf01;
+    --mint: #37e2b7;
     --blue: #04d9ff;
+    --purple: #a76ae0;
     --branch: 1px solid #a7a9be;
 }
 
@@ -26,7 +28,7 @@ body {
     height: 100%;
     background-color: var(--background);
     font-family: 'Inconsolata', monospace;
-    color: #FFF;
+    color: var(--white);
     font-size: 100%;
 }
 
@@ -49,14 +51,10 @@ h3 {
     height: 100px;
 }
 
-.column > ul {
-    margin: 0;
-    padding-left: 1rem;
-}
-
 ul {
+    margin: 0;
     list-style: none;
-    padding-left: 2.5rem;
+    padding-left: 1rem;
 }
 
 li {
@@ -71,13 +69,14 @@ a {
     font-size: 1rem;
 }
 
-li:before, li:after {
+li::before, li::after {
     content: "";
     position: absolute;
     left: -0.75rem;
+    top: 0rem;
 }
 
-li:before {
+li::before {
     content: "";
     position: absolute;
     left: -0.75rem;
@@ -86,7 +85,7 @@ li:before {
     border-top: var(--branch);
 }
 
-li:after {
+li::after {
     border-left: var(--branch);
     height: 100%;
 }
@@ -94,28 +93,7 @@ li:last-child::after {
     height: 0.5rem;
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
     color: var(--background);
     background: var(--white);
-}
-
-.blue {
-    color: var(--blue);
-}
-
-.orange {
-    color: var(--orange);
-}
-
-.mint {
-    color: var(--mint);
-}
-
-.pink {
-    color: var(--pink);
-}
-
-.green {
-    color: var(--green);
 }

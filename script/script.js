@@ -4,24 +4,40 @@ const Main = (() => {
 	const init = () => {
 		const contentArea = document.getElementById("content");
 		contentArea.innerHTML = Data.map(col => `<div class="column">
-			${(col.rows || []).map(({title, items, href}) =>
-				href
-				? onlyLink(href, title)
-				: blockWithList(title, items))
-			.join("")}
+			${(col.rows || []).map(({title, items, href, color}) =>
+				`${h3(title, href, color)}
+				 ${list(items)}`
+			).join("")}
 		</div>`).join("");
 	}
 
-	const onlyLink = (href, title) => `<h3><a class="blue" href="${href}">${title}</a></h3>`;
-	const blockWithList = (title, items) => {
-		return `<h3>${title}</h3>
-				<ul class="row">
-					${(items || []).map(({name, href, tags}) => `<li>
-						<a href="${href}">${name}</a>&nbsp&nbsp${(tags || []).map(({name, color, href}) => `
-						[<a class="${color}" href="${href}">${name}</a>]`).join(" ")}
-					</li>`).join("")}
-				</ul>`;
-	};
+	const h3 = (title, href, color="blue") =>
+		href
+		? `<h3><a style="color:var(--${color})" href="${href}">${title}</a></h3>`
+		: `<h3>${title}</h3>`;
+
+	const list = (items) =>
+		items
+		? `<ul>
+			${items.map(({name, href, tags, items}) => `<li>
+				${link(name, href)}
+				${taglist(tags)}
+				${list(items)}
+			</li>`).join("")}
+		</ul>`
+		: "";
+
+	const link = (name, href) =>
+		name
+		? `<a href="${href}">${name}</a>&nbsp&nbsp`
+		: "";
+
+	const taglist = (tags) =>
+		tags
+		? tags
+			.map(({name, color, href}) => `[<a style="color:var(--${color})" href="${href}">${name}</a>]`)
+			.join(" ")
+		: "";
 
 	return {
 		init

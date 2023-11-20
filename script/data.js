@@ -4,11 +4,37 @@ const Data = [{
 		items: [
 			{
 				"name": "example",
-				"href": "https://example.com/"
+				"href": "https://example.com/",
+				"items": [
+					{
+						"name": "nested1",
+						"href": "https://example.com/"
+					},
+					{
+						"name": "nested2",
+						"href": "https://example.com/"
+					}]
 			},
 			{
 				"name": "example",
-				"href": "https://example.com/"
+				"href": "https://example.com/",
+				"items": [
+					{
+						"tags": [{
+							"name": "n1",
+							"color": "yellow",
+							"href": "http://github.com/example"
+						}, {
+							"name": "n2",
+							"color": "purple",
+							"href": "http://github.com/example"
+						}, {
+							"name": "n3",
+							"color": "yellow",
+							"href": "http://github.com/example"
+						}]
+					}
+				]
 			},
 			{
 				"name": "example",
