@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2023-11-28
+
+### Added
+
+- Support for 2 to 4 columns
+
+### Changed
+
+- Using semantic html tags
+
 ## [1.1.1] - 2023-11-20
 
 ### Fixed
